@@ -1,0 +1,30 @@
+body{
+    display: flex;
+    height: 100vh;
+    
+}
+
+
+div{
+    font-weight: 700;
+}
+
+.left{
+    flex:1;
+    height:100vh;
+    width: 40vw;
+    margin: 0;
+    background-color: orange;
+    background-image: url('../image/odin-pic.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.right{
+    display: flex;
+    flex: 2;
+    height: 100vh;
+    width: 60vw;
+}
