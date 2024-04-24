@@ -1,3 +1,7 @@
+@font-face {
+    font-family: logo_font;
+    src: url('../image_n_font/Norse-Bold.otf');
+}
 body{
     display: flex;
     width: auto;
@@ -10,35 +14,53 @@ body{
     flex:2; /*alternatively use 40vw vs 60vw*/
     margin: 0;
     background-color: orange;
-    background-image: url('../image/odin-pic.png');
+    background-image: url('../image_n_font/odin-pic.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 
 }
 
+.left>.logo{
+    background-color:rgba(139, 153, 151, 0.277);;
+    min-height: 80px;
+    width: auto; /*take watever space given*/
+    position: relative;
+    top: 230px;
+    font-family:'logo_font';
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+}
+
+.logo>#image, .logo>span{
+    max-height: 80px;
+    position: relative;
+    left:180px;
+}
+
 .right{
     display: flex;
     flex-direction: column;
     flex:3;
+    flex-wrap:wrap ;
     
 }
 
 .right>.row-1{
     
     height: 34%;
-    
     padding-top: 50px;
     padding-left: 40px;
     padding-bottom: 40px;
-    min-height: 191px;
+    min-height: 191px; /*allows the section to increase and prevent overflow*/
     background-color: whitesmoke;
 }
 
 .row-1 p{
     max-width: 75ch;
     font-weight: 550;
-    max-width: 686px;
+    
 }
 
 p.first{
@@ -46,9 +68,10 @@ p.first{
 }
 
 .right>.row-2{
-    width: 100%;
+    width: auto;
     height: 32%;
-    
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .row-2 div{
@@ -60,7 +83,7 @@ ul {
 }
 
 .right>.row-3{
-    width: 100%;
+    width: auto;
     height:34%;
     background-color: whitesmoke;
 }
