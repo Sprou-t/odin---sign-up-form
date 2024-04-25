@@ -1,7 +1,8 @@
 @font-face {
-    font-family: logo_font;
+    font-family: 'logo_font';
     src: url('../image_n_font/Norse-Bold.otf');
 }
+
 body{
     display: flex;
     flex-wrap: wrap;
@@ -12,14 +13,15 @@ body{
 
 .left{
     height:100vh;
-    flex:2; /*alternatively use 40vw vs 60vw*/
+    flex:2 2 0; /*alternatively use 40vw vs 60vw*/
     margin: 0;
+    position: relative;
+    top:0;
     background-color: orange;
     background-image: url('../image_n_font/odin-pic.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
 }
 
 .left>.logo{
@@ -27,7 +29,7 @@ body{
     min-height: 80px;
     width: auto; /*take watever space given*/
     position: relative;
-    top: 230px;
+    top:250px;
     font-family:'logo_font';
     display: flex;
     justify-content: center;
@@ -45,7 +47,7 @@ body{
 .right{
     display: flex;
     flex-direction: column;
-    flex:3;
+    flex:3 1 0;
     flex-wrap:wrap ;
     
 }
@@ -64,7 +66,6 @@ body{
 .row-1 p{
     max-width: 75ch;
     font-weight: 550;
-    
 }
 
 p.first{
@@ -116,35 +117,29 @@ li{
 }
 input:required{
     appearance: none;
-    outline: none; /*need these 2 to remove all the default stylings*/
+    outline-color: transparent; /*these is to remove the default blue outline of chrome when focus is on that form element*/
     border: 1px solid black;
     border-radius: 5px;
     
 }
 input:valid:focus{
     border-color: darkblue;
-    
-    
-    
 } 
+
 input:valid{
     border-color: green;
 }
+
 input:invalid:focus{
     border-color: red;
 }
-
-
 
 .row-2 .center{
     gap: 80px;
 }
 
-.row-2 .bottom{
-    
-}
-
 .bottom button{
+    margin-top: max(30px);
     appearance: none;
     border-radius: 8px;
     background-color: blueviolet;
@@ -161,3 +156,80 @@ input:invalid:focus{
     margin-top: 30px;
     padding-left: 80px;
 }
+
+@media(max-width:376px){
+    .top{
+        margin-bottom: 2px;
+    }
+    
+    .top>p{
+        padding-top:2px;
+        font-size: 1rem;
+    }
+    
+}
+@media(max-width:450px){
+   
+    body{
+        flex-direction: column;
+        flex-wrap: wrap;
+        
+    }
+
+    .left{
+        position: relative;
+    }
+
+    .left>.logo{
+        position: relative;
+        top:0;
+        
+    }
+
+    .right>.row-1, .right>.row-2, .right>.row-3{
+        padding-left: 50px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .right>.row-2{
+        height: 57%;
+    }
+
+    .top{
+        margin-bottom: 5px;
+    }
+    
+    .top>p{
+        padding-top:2px;
+        font-size: 1.1rem;
+    }
+}
+    @media(max-width:1069px){
+        .row-2 div{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        form>.center{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .row-2 .center{
+            gap: 0;
+        }
+        
+        li{
+            display: flex;
+            flex-direction: column;
+            width: max(250px);
+            border-radius: 50px;
+            margin-bottom: 4px;
+        }
+
+        .bottom button{
+            margin-top: max(8px);
+        }
+    }
