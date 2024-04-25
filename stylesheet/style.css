@@ -4,6 +4,7 @@
 }
 body{
     display: flex;
+    flex-wrap: wrap;
     width: auto;
     height: 100%;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -29,14 +30,16 @@ body{
     top: 230px;
     font-family:'logo_font';
     display: flex;
+    justify-content: center;
     align-items: center;
     font-size: 3rem;
+    overflow: hidden;
 }
 
 .logo>#image, .logo>span{
     max-height: 80px;
     position: relative;
-    left:180px;
+
 }
 
 .right{
@@ -48,10 +51,11 @@ body{
 }
 
 .right>.row-1{
-    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     height: 34%;
+    width: 100%;
     padding-top: 50px;
-    padding-left: 40px;
+    padding-left: 80px;
     padding-bottom: 40px;
     min-height: 191px; /*allows the section to increase and prevent overflow*/
     background-color: whitesmoke;
@@ -68,22 +72,92 @@ p.first{
 }
 
 .right>.row-2{
-    width: auto;
-    height: 32%;
+    width: 100%;
+    height: 50%;
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 2px;
+    padding-left:max(80px);
+    box-shadow: 0px 10px 20px grey;
+    font-size: 0.8rem;
 }
+form{
+    width: 100%;
+}
+
 
 .row-2 div{
     display: flex;
+    flex-wrap: wrap;
+}
+.top{
+    max-height: 20%;
+    margin-bottom: clamp(18px,20px,25px);
+}
+
+.top>p{
+    padding-top:clamp(5px,20px,22px);
+    font-size: 1.8rem;
 }
 
 ul {
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding-inline-start: 0px;
+   
+}
+
+li{
+    display: flex;
+    flex-direction: column;
+    border-radius: 50px;
+    margin-bottom: 4px;
+}
+input:required{
+    appearance: none;
+    outline: none; /*need these 2 to remove all the default stylings*/
+    border: 1px solid black;
+    border-radius: 5px;
+    
+}
+input:valid:focus{
+    border-color: darkblue;
+    
+    
+    
+} 
+input:valid{
+    border-color: green;
+}
+input:invalid:focus{
+    border-color: red;
+}
+
+
+
+.row-2 .center{
+    gap: 80px;
+}
+
+.row-2 .bottom{
+    
+}
+
+.bottom button{
+    appearance: none;
+    border-radius: 8px;
+    background-color: blueviolet;
+    color:aliceblue;
+    font-weight: 600;
+    font-size: 120%;
+    height: 34px;
+    width: 180px;
+
 }
 
 .right>.row-3{
     width: auto;
-    height:34%;
-    background-color: whitesmoke;
+    margin-top: 30px;
+    padding-left: 80px;
 }

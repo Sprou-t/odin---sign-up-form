@@ -25,60 +25,67 @@
 
         
         <div class="row-2">
-            <form>
-                <p> Sign up!</p>
-                <div>
-                    <section>
+            <form method="post" action="example.path">
+                <div class="top">
+                    <p>Sign up!</p>
+                </div>
+                <div class="center">
+
+                    <section id="col_1">
                         <ul>
                             <li>
                                 <label for="f_name">FIRST NAME</label>
-                                <input id="f_name" name="first_name" required>
+                                <input id="f_name" name="first_name" type="text" required>
                             </li>
-                        </ul>
-
-                        <ul>
+                        
                             <li>
                                 <label for="email">EMAIL</label>
-                                <input id="email" name="email" required>
+                                <input id="email" name="email" type="email" required>
                             </li>
-                        </ul>
-
-                        <ul>
+                       
                             <li>
                                 <label for="password">PASSWORD</label>
-                                <input id="password" name="password" required>
+                                <input id="password" name="password" type="password" required>
                             </li>
+                            
                         </ul>
+
                     </section>
 
-                    <section>
+                    <section id="col_2">
                         <ul>
                             <li>
                                 <label for="l_name">LAST NAME</label>
-                                <input id="l_name" name="last_name" required>
+                                <input id="l_name" name="last_name" type="text" required pattern="\D+">
                             </li>
                         </ul>
 
                         <ul>
                             <li>
                                 <label for="p_no">PHONE NUMBER</label>
-                                <input id="p_no" name="p_num" required>
+                                <input id="p_no" name="p_num" type="number" required>
                             </li>
                         </ul>
 
                         <ul>
                             <li>
                                 <label for="com_password">COMFIRM PASSWORD</label>
-                                <input id="com_password" name="com_password" required>
+                                <input id="com_password" name="com_password" type="number" required>
                             </li>
                         </ul>
                     </section>
+                </div>
+
+                <div class="bottom">
+                    <li>
+                        <button type="submit"> Create Account</button>
+                    </li>
                 </div>
             </form>
         </div>
             
             <div class="row-3">
-                <button type="button"> Create Account</button>
+                <div>Already have an account? <a href="###">Log in!</a></div>
             </div>
         
         
