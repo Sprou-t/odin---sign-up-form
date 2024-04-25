@@ -117,7 +117,7 @@ li{
 }
 input:required{
     appearance: none;
-    outline-color: transparent; /*these is to remove the default blue outline of chrome when focus is on that form element*/
+    outline: none; /*these is to remove the default blue outline of chrome when focus is on that form element*/
     border: 1px solid black;
     border-radius: 5px;
     
