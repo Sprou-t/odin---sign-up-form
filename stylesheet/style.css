@@ -161,6 +161,10 @@ input:invalid:focus{
     .top{
         margin-bottom: 2px;
     }
+
+    .right>.row-1{
+        padding-top: 26px;
+    }
     
     .top>p{
         padding-top:2px;
@@ -191,6 +195,13 @@ input:invalid:focus{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+    }
+
+    .right>.row-1{
+        padding-top: 36px;
+    }
+    p.first{
+        margin-bottom: 3px;
     }
 
     .right>.row-2{
